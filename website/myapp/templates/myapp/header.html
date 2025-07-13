@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Responsive Banner with Text Overlay -->
+<div class="position-relative w-100" style="height: 400px; overflow: hidden;">
+  <!-- Background Image -->
+  <img src="{% static 'myapp/images/sports banner.jpg' %}" alt="Sports Banner"
+       style="width: 100%; height: 100%; object-fit: cover; display: block;">
+
+  <!-- Text Overlay -->
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-black px-3"
+       style="text-shadow: 2px 2px 6px rgba(216, 158, 158, 0.8);">
+    <h1 class="fw-bold display-1">Kaliganj Anchal Sports</h1>
+    <h1>Annual Sports 2025</h4>
+    <h3 class="fw-semibold">Student Registration</h5>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
