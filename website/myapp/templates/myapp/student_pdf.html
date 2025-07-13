@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaliganj Anchal Sports 2025</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+            @bottom-center {
+                content: "© 2025 Kaliganj Anchal Sports Committee - System generated form";
+                font-size: 10px;
+                color: gray;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        .line {
+            border-top: 1px solid #000;
+            margin: 15px 0;
+        }
+
+        .section-title {
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-table {
+            width: 100%;
+        }
+
+        .info-table td {
+            padding: 4px 0;
+        }
+
+        .label {
+            font-weight: bold;
+            width: 140px;
+        }
+
+        .photo-box {
+            width: 100px;
+            height: 120px;
+            border: 1px solid #555;
+            object-fit: cover;
+        }
+
+        .sports-list {
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kaliganj Anchal Sports 2025</h1>
+        <h2>{{ student.school.name }}</h2>
+
+        <div class="line"></div>
+        <div class="section-title">Personal Details</div>
+
+        <div class="row">
+            <table class="info-table">
+                <tr>
+                    <td class="label">Name:</td>
+                    <td>{{ student.name }}</td>
+                </tr>
+                <tr>
+                    <td class="label">ID:</td>
+                    <td>{{ student.id }}</td>
+                </tr>
+                <tr>
+                    <td class="label">DOB:</td>
+                    <td>{{ student.dob }}</td>
+                </tr>
+                <tr>
+                    <td class="label">Gender:</td>
+                    <td>{{ student.gender }}</td>
+                </tr>
+                <tr>
+                    <td class="label">Father ‘s Name:</td>
+                    <td>{{ student.father_name }}</td>
+                </tr>
+            </table>
+
+            {% if student.image %}
+                <img src="{{ student.image.url }}" class="photo-box">
+            {% else %}
+                <div class="photo-box"></div>
+            {% endif %}
+        </div>
+
+        <div class="line"></div>
+        <div class="section-title">Sports details</div>
+
+        <table class="info-table">
+            <tr>
+                <td class="label">Group:</td>
+                <td>{{ student.group.name }}</td>
+            </tr>
+            <tr>
+                <td class="label" valign="top">Selected Sports:</td>
+                <td>
+                {% if sports_list %}
+                <div class="row">
+                    {% for sport in sports_list %}
+                    <div class="col-4">
+                        <li>{{ sport }}</li>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p>No sports selected</p>
+                {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

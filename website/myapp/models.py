@@ -33,6 +33,7 @@ class Student(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    chest_number = models.CharField(max_length=10, blank=True, null=True) 
 
     def __str__(self):
         return f"{self.name} ({self.id_number})"

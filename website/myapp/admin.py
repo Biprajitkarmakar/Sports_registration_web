@@ -10,9 +10,9 @@ admin.site.register(School)
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'id_number', 'school', 'group', 'gender', 'image_preview', 'created_at')
+    list_display = ('name', 'id_number', 'school', 'group', 'gender', 'image_preview', 'created_at' , 'chest_number')
     list_filter = ('school', 'group', 'gender')
-    search_fields = ('name', 'id_number', 'school__name')
+    search_fields = ('name', 'id_number', 'school__name' , 'chest_number')
 
     def image_preview(self, obj):  # 🔁 Must match the name in list_display
         if obj.image:
