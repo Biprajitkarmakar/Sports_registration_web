@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-^wn_dqgt4#ig3qy_mmw)4myb5f4ik=ct6mv=n4qsxoc!$luwhl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sports-registration.onrender.com', 'localhost']
+
 
 
 # Application definition
@@ -129,10 +130,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-
