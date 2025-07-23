@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^wn_dqgt4#ig3qy_mmw)4myb5f4ik=ct6mv=n4qsxoc!$luwhl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sports-registration.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['kaliganj-anchal-sports.onrender.com', 'localhost', '127.0.0.1']
 
 
 
